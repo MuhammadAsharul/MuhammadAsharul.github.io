@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/saya2.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Asharul | Portofolio</title>
+  </head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            Unbounded: ["Unbounded"],
+            Poppins: ["Poppins"]
+          },
+          spacing: {
+            13: "3.25rem"
+          },
+          colors: {
+            primer: "#C7FF84",
+            second: "#21242E"
+          }
+        }
+      }
+    };
+  </script>
+  <style type="text/tailwindcss">
+    * {
+      font-family: Poppins;
+      /* background-color: black; */
+    }
+  </style>
+  <body>
+    <div class="hero min-h-screen">
+      <!-- Header Section Start -->
+      <script
+        src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+        defer
+      ></script>
+      <div
+        class="text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 pt-3 items-center mb-4"
+      >
+        <div
+          x-data="{ open: false }"
+          class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+        >
+          <div class="flex p-2 flex-row items-center justify-between">
+            <img src="saya2.png" alt="" class="w-10 mr-4" />
+            <a
+              href="#"
+              class="text-lg font-extrabold tracking-wide text-gray-900 rounded-[30px] dark-mode:text-white focus:outline-none focus:shadow-outline"
+              >Muhammad Asharul</a
+            >
+            <button
+              class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+              @click="open = !open"
+            >
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                <path
+                  x-show="!open"
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  x-show="open"
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <nav
+            :class="{'flex': open, 'hidden': !open}"
+            class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row"
+          >
+            <a
+              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-primer focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              href="#"
+              >Project</a
+            >
+            <a
+              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-primer focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              href="#"
+              >About</a
+            >
+            <a
+              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-primer focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              href="#"
+              >Contact</a
+            >
+          </nav>
+        </div>
+      </div>
+      <!--  Header Section End-->
+
+      <!-- Hero Section Start-->
+      <main>
+        <div class="relative px-6 py-2 lg:px-8 bg-second rounded-t-lg mx-3">
+          <div class="mx-auto sm:p-16">
+            <div>
+              <div class="sm:mb-8 sm:flex sm:justify-center">
+                <div
+                  class="flex justify-center rounded-full px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 sm:bg-auto mb-2"
+                >
+                  <img src="background.png" alt="text-center" / style="width:
+                  80%;">
+                </div>
+              </div>
+              <div>
+                <p class="sm:text-center text-primer">
+                  👋&nbsp; Hello ! I'm Muhammad Asharul
+                </p>
+                <h1
+                  class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-primer"
+                >
+                  Programmer
+                  <br />
+                  Fullstack Developer
+                </h1>
+                <p
+                  class="mt-6 text-lg leading-8 text-white sm:text-center font-['Poppins']"
+                >
+                  Focused Web Developer building the Fullstack of Websites and
+                  Web Applications
+                </p>
+                <div
+                  class="mt-4 flex gap-x-8 sm:justify-center sm:items-center sm:py-5"
+                >
+                  <a
+                    href="#"
+                    class="flex items-center rounded-lg bg-primer px-4 py-1.5 text-base leading-7 text-black shadow-sm ring-primer hover:bg-second hover:text-primer"
+                  >
+                    Resume &nbsp
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-.53 14.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V8.25a.75.75 0 00-1.5 0v5.69l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <a
+                    href="#"
+                    class="flex items-center rounded-lg px-4 py-1.5 text-base leading-7 text-white hover:bg-primer hover:text-black hover"
+                  >
+                    <img
+                      src="https://img.icons8.com/ios-glyphs/30/FFFFFF/github.png"
+                    />
+                    &nbsp; Github
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ======  Hero Section End -->
+
+      <!-- ====== Portfolio Section Start -->
+      <!-- <section
+        x-data="
+      {
+        showCards: 'all',
+        activeClasses: 'bg-primer text-black',
+        inactiveClasses: 'text-body-color hover:bg-primer hover:text-black',
+      }
+    "
+        class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] mx-3 bg-second"
+      >
+        <div class="container mx-auto">
+          <div class="-mx-4 flex flex-wrap">
+            <div class="w-full px-4">
+              <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+                <span class="text-white mb-2 block text-lg font-semibold">
+                  Our Portfolio
+                </span>
+                <h2
+                  class="text-white mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]"
+                >
+                  Our Recent Projects
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="-mx-4 flex flex-wrap justify-center">
+            <div class="w-full px-4">
+              <ul class="mb-12 flex flex-wrap justify-center space-x-1">
+                <li class="mb-1 font-['Poppins']">
+                  <button
+                    @click="showCards = 'all' "
+                    :class="showCards == 'all' ? activeClasses : inactiveClasses "
+                    class="inline-block py-2 px-5 text-center text-primer font-semibold transition md:py-3 lg:px-8 rounded-lg"
+                  >
+                    All Projects
+                  </button>
+                </li>
+                <li class="mb-1 font-['Poppins']">
+                  <button
+                    @click="showCards = 'branding' "
+                    :class="showCards == 'branding' ? activeClasses : inactiveClasses "
+                    class="inline-block py-2 px-5 text-center text-primer font-semibold transition md:py-3 lg:px-8 rounded-lg"
+                  >
+                    Branding
+                  </button>
+                </li>
+                <li class="mb-1 font-['Poppins']">
+                  <button
+                    @click="showCards = 'design' "
+                    :class="showCards == 'design' ? activeClasses : inactiveClasses "
+                    class="inline-block py-2 px-5 text-center text-primer font-semibold transition md:py-3 lg:px-8 rounded-lg"
+                  >
+                    Design
+                  </button>
+                </li>
+                <li class="mb-1 font-['Poppins']">
+                  <button
+                    @click="showCards = 'marketing' "
+                    :class="showCards == 'marketing' ? activeClasses : inactiveClasses "
+                    class="inline-block py-2 px-5 text-center text-primer font-semibold transition md:py-3 lg:px-8 rounded-lg"
+                  >
+                    Marketing
+                  </button>
+                </li>
+                <li class="mb-1 font-['Poppins']">
+                  <button
+                    @click="showCards = 'development' "
+                    :class="showCards == 'development' ? activeClasses : inactiveClasses "
+                    class="inline-block py-2 px-5 text-center text-primer font-semibold transition md:py-3 lg:px-8 rounded-lg"
+                  >
+                    Development
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="-mx-4 flex flex-wrap">
+            <div
+              :class="showCards == 'all' || showCards == 'branding' ? 'block' : 'hidden' "
+              class="w-full px-4 md:w-1/2 xl:w-1/3"
+            >
+              <div class="relative mb-12">
+                <div class="overflow-hidden">
+                  <img src="portofolio/1.png" alt="portfolio" class="w-full" />
+                </div>
+                <div
+                  class="relative z-10 mx-7 -mt-20 bg-white py-9 px-3 text-center shadow-lg"
+                >
+                  <span class="text-primary mb-2 block text-sm font-semibold">
+                    Branding
+                  </span>
+                  <h3 class="text-dark mb-4 text-xl font-bold">
+                    Branding Design
+                  </h3>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-body-color hover:bg-second hover:border-second inline-block border py-3 px-7 text-sm font-semibold transition hover:text-primer"
+                  >
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              :class="showCards == 'all' || showCards == 'marketing' ? 'block' : 'hidden' "
+              class="w-full px-4 md:w-1/2 xl:w-1/3"
+            >
+              <div class="relative mb-12">
+                <div class="overflow-hidden">
+                  <img
+                    src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-02.jpg"
+                    alt="portfolio"
+                    class="w-full"
+                  />
+                </div>
+                <div
+                  class="relative z-10 mx-7 -mt-20 bg-white py-9 px-3 text-center shadow-lg"
+                >
+                  <span class="text-primary mb-2 block text-sm font-semibold">
+                    Marketing
+                  </span>
+                  <h3 class="text-dark mb-4 text-xl font-bold">
+                    Best Marketing tips
+                  </h3>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-body-color hover:bg-black hover:border-black inline-block border py-3 px-7 text-sm font-semibold transition hover:text-primer"
+                  >
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              :class="showCards == 'all' || showCards == 'development' ? 'block' : 'hidden' "
+              class="w-full px-4 md:w-1/2 xl:w-1/3"
+            >
+              <div class="relative mb-12">
+                <div class="overflow-hidden">
+                  <img
+                    src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-03.jpg"
+                    alt="portfolio"
+                    class="w-full"
+                  />
+                </div>
+                <div
+                  class="relative z-10 mx-7 -mt-20 bg-white py-9 px-3 text-center shadow-lg"
+                >
+                  <span class="text-primary mb-2 block text-sm font-semibold">
+                    Development
+                  </span>
+                  <h3 class="text-dark mb-4 text-xl font-bold">
+                    Web Design Trend
+                  </h3>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-body-color hover:bg-black hover:border-black inline-block border py-3 px-7 text-sm font-semibold transition hover:text-primer"
+                  >
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              :class="showCards == 'all' || showCards == 'design' ? 'block' : 'hidden' "
+              class="w-full px-4 md:w-1/2 xl:w-1/3"
+            >
+              <div class="relative mb-12">
+                <div class="overflow-hidden">
+                  <img
+                    src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-04.jpg"
+                    alt="portfolio"
+                    class="w-full"
+                  />
+                </div>
+                <div
+                  class="relative z-10 mx-7 -mt-20 bg-white py-9 px-3 text-center shadow-lg"
+                >
+                  <span class="text-primary mb-2 block text-sm font-semibold">
+                    Design
+                  </span>
+                  <h3 class="text-dark mb-4 text-xl font-bold">
+                    Business Card Design
+                  </h3>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white"
+                  >
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              :class="showCards == 'all' || showCards == 'marketing' ? 'block' : 'hidden' "
+              class="w-full px-4 md:w-1/2 xl:w-1/3"
+            >
+              <div class="relative mb-12">
+                <div class="overflow-hidden">
+                  <img
+                    src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-05.jpg"
+                    alt="portfolio"
+                    class="w-full"
+                  />
+                </div>
+                <div
+                  class="relative z-10 mx-7 -mt-20 bg-white py-9 px-3 text-center shadow-lg"
+                >
+                  <span class="text-primary mb-2 block text-sm font-semibold">
+                    Marketing
+                  </span>
+                  <h3 class="text-dark mb-4 text-xl font-bold">
+                    Digital marketing
+                  </h3>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white"
+                  >
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              :class="showCards == 'all' || showCards == 'branding' ? 'block' : 'hidden' "
+              class="w-full px-4 md:w-1/2 xl:w-1/3"
+            >
+              <div class="relative mb-12">
+                <div class="overflow-hidden">
+                  <img
+                    src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-06.jpg"
+                    alt="portfolio"
+                    class="w-full"
+                  />
+                </div>
+                <div
+                  class="relative z-10 mx-7 -mt-20 bg-white py-9 px-3 text-center shadow-lg"
+                >
+                  <span class="text-primary mb-2 block text-sm font-semibold">
+                    Branding
+                  </span>
+                  <h3 class="text-dark mb-4 text-xl font-bold">
+                    Creative Agency
+                  </h3>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white"
+                  >
+                    View Details
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- ====== Portfolio Section End -->
+      <section class="bg-white dark:bg-second mx-3">
+        <div class="container px-12 py-10 mx-auto">
+          <div class="text-center">
+            <h1
+              class="lg:text-3xl font-semibold text-gray-800 capitalize text-2xl dark:text-white text-center px-3"
+            >
+              Projects
+            </h1>
+            <p class="text-white mt-2">Here you will find some my projects,</p>
+          </div>
+
+          <hr class="my-8 border-gray-200 dark:border-gray-700" />
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div>
+              <img
+                class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                src="portofolio/1.png"
+                alt=""
+              />
+
+              <div class="mt-8">
+                <span class="text-primer">Web Development</span>
+
+                <h1
+                  class="mt-4 text-xl font-semibold text-gray-800 dark:text-white"
+                >
+                  ThriftAja
+                </h1>
+
+                <p class="mt-2 leading-8 text-white sm font-['Poppins']">
+                  Aplikasi sistem informasi Ec ommerce yang dibuat menggunakan
+                  Laravel hasil dari Studi Independen Kampus Merdeka.
+                </p>
+
+                <div class="flex items-center justify-between mt-4">
+                  <div class="flex space-x-3">
+                    <p
+                      class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black"
+                    >
+                      Laravel
+                    </p>
+                    <p
+                      class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black"
+                    >
+                      HTML
+                    </p>
+                    <p
+                      class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black"
+                    >
+                      CSS
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <img
+                class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                src="portofolio/2.png"
+                alt=""
+              />
+
+              <div class="mt-8">
+                <span class="text-primer">Web Development</span>
+
+                <h1
+                  class="mt-4 text-xl font-semibold text-gray-800 dark:text-white"
+                >
+                  Laravel SPPD
+                </h1>
+
+                <p class="mt-2 leading-8 text-white font-['Poppins']">
+                  Aplikasi sistem informasi surat perintah perjalanan dinas yang
+                  dibuat menggunakan Laravel untuk Kominfo Kabupaten
+                  Karanganyar.
+                </p>
+
+                <div class="flex items-center justify-between mt-4">
+                  <div class="flex space-x-3">
+                    <p
+                      class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black"
+                    >
+                      Laravel
+                    </p>
+                    <p
+                      class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black"
+                    >
+                      HTML
+                    </p>
+                    <p
+                      class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black"
+                    >
+                      CSS
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <img
+                class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                src="portofolio/3.png"
+                alt=""
+              />
+
+              <div class="mt-8">
+                <span class="text-primer">Web Development</span>
+
+                <h1
+                  class="mt-4 text-xl font-semibold text-gray-800 dark:text-white"
+                >
+                  Travel App
+                </h1>
+
+                <p class="mt-2 leading-8 text-white font-['Poppins']">
+                  Aplikasi sistem informasi travel yang dibuat menggunakan
+                  Laravel untuk mempermudah dalam berwisata.
+                </p>
+
+                <div class="flex items-center mt-4">
+                  <div>
+                    <div class="flex space-x-3">
+                      <p
+                        class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black hover:font-semibold"
+                      >
+                        Laravel
+                      </p>
+                      <p
+                        class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black hover:font-semibold"
+                      >
+                        HTML
+                      </p>
+                      <p
+                        class="border text-sm px-6 text-center py-2 rounded-lg text-primer hover:bg-primer hover:text-black hover:font-semibold"
+                      >
+                        CSS
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section Start -->
+
+      <!-- About Section End -->
+      <!-- Contact Section Start -->
+      <section class="text-gray-600 body-font relative bg-second mx-3">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1
+              class="sm:text-2xl lg:text-3xl font-semibold title-font mb-4 text-white"
+            >
+              Contact Us
+            </h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-white">
+              Here you can send massage for me
+            </p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-white"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full bg-opacity-50 rounded border py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+              </div>
+              <div class="p-2 w-1/2">
+                <div class="relative">
+                  <label for="email" class="leading-7 text-sm text-white"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-white"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <button
+                  class="flex mx-auto text-black font-semibold uppercase bg-primer border-0 py-1.5 px-8 focus:outline-none hover:bg-second hover:text-primer rounded text-lg hover:ring-1 ring-primer"
+                >
+                  Send
+                </button>
+              </div>
+              <div
+                class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center"
+              >
+                <a class="text-primer">masharul51@gmail.com</a>
+                <p class="leading-normal my-5">
+                  Boyolali <br />Jawa Tengah, Indonesia
+                </p>
+                <span class="inline-flex">
+                  <a
+                    class="text-gray-500"
+                    href="https://www.facebook.com/muhammad.arul.71/"
+                    target="_blank"
+                  >
+                    <svg
+                      fill="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    class="ml-4 text-gray-500"
+                    href="https://twitter.com/Asharulll "
+                    target="_blank"
+                  >
+                    <svg
+                      fill="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    class="ml-4 text-gray-500"
+                    href="https://www.instagram.com/muhammad.asharul/"
+                    target="_blank"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect
+                        width="20"
+                        height="20"
+                        x="2"
+                        y="2"
+                        rx="5"
+                        ry="5"
+                      ></rect>
+                      <path
+                        d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    class="ml-4 text-gray-500"
+                    href="https://anchor.fm/muhammadasharul"
+                    target="_blank"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section End -->
+      <!-- ====== Footer Section Start -->
+
+      <!-- ====== Footer Section End --->
+    </div>
+  </body>
+</html>
